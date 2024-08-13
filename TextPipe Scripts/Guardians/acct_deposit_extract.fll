@@ -1,0 +1,99 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "post_date,account_no,SOURCE_CODE,deposit_amount,sequence_no,,,,,\r\n12\/3\/2020,1849970,E,17432.75,1,,,,,\r\n12\/3\/2020,1849970,E,81175,2,,,,,\r\n12\/4\/2020,1849970,E,25172.82,3,,,,,\r\n12\/4\/2020,1849970,E,96775,4,,,,,\r\n12\/6\/2020,1849970,A,31,5,,,,,\r\n12\/7\/2020,1849970,E,24334.94,6,,,,,\r\n12\/7\/2020,1849970,E,300190,7,,,,,\r\n12\/7\/2020,1852078,E,50,8,,,,,\r\n12\/8\/2020,1849970,E,555,9,,,,,\r\n12\/8\/2020,1849970,E,54835,10,,,,,\r\n12\/8\/2020,1849970,E,77305.36,11,,,,,\r\n12\/9\/2020,1849970,E,19331.18,12,,,,,\r\n12\/9\/2020,1849970,E,71715,13,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n,,,,,,,,,\r\n",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Search": {
+      "search": ",,,,,,,,,",
+      "replace": "",
+      "ignoreCase": true,
+      "patternType": 2,
+      "replaceType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Simple": {
+      "filterType": 12
+    },
+    "Simple": {
+      "filterType": 10
+    },
+    "Columns": {
+      "filterType": 6,
+      "value": "1",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Search": {
+      "search": ",",
+      "replace": "\\t",
+      "ignoreCase": true,
+      "patternType": 0,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Columns": {
+      "filterType": 7,
+      "value": "6..10",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false
+    },
+    "InsertColumn": {
+      "filterType": 0,
+      "insertPos": 0,
+      "value": "\\tD\\t\\t\\t\\t\\t\\t\\t\\t"
+    },
+    "InsertColumn": {
+      "filterType": 2,
+      "insertPos": 1,
+      "value": "post_date\taccount_no\tsource_code\tdeposit_amount\tsequence_no\taction_code\taccount_type\taccount_id\tuser_no\ttrans_description\ttrans_comment\ttrans_code\ttrans_from\ttrans_to\r\n"
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "I:\\FI-Extracts\\Guardians\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

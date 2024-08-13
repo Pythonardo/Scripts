@@ -1,0 +1,319 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "post_date   account_no   source_code   deposit_amount   sequence_no\r\n2020-09-01   01001121   K   691.82   21489381\r\n2020-09-01   01002670   E   738.79   21489716\r\n2020-09-01   01005017   K   135.00   21493613\r\n2020-09-01   01010594   E   3000.00   21489720\r\n2020-09-01   01010594   E   200.00   21492543\r\n2020-09-01   01010594   K   285.00   21493614\r\n2020-09-01   01010594   K   208.31   21493615\r\n2020-09-01   01010594   K   34.66   21493616\r\n2020-09-01   01011632   K   1640.00   21489382\r\n2020-09-01   01011632   E   185.74   21489723\r\n2020-09-01   01011632   E   1422.48   21489724\r\n2020-09-01   01011632   E   0.19   21492544\r\n2020-09-01   01011632   E   28.85   21492545\r\n2020-09-01   01011632   K   2902.09   21493617\r\n2020-09-01   01011632   K   1900.13   21493618\r\n2020-09-01   01011632   K   257.57   21493619\r\n2020-09-01   01011632   K   131.44   21493620\r\n2020-09-01   02000147   E   2.00   21489725\r\n2020-09-01   02000150   M   23127.03   21489355",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Columns": {
+      "filterType": 6,
+      "value": "1",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "3",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "*",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        },
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "4",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": ",",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        },
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "7",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "8",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "10",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": true,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "\\s+$",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        },
+        "Search": {
+          "search": "^\\s+",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "11",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": true,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "\\s+$",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        },
+        "Search": {
+          "search": "^\\s+",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        },
+        "Simple": {
+          "filterType": 19
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "13",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": true,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "\\s+$",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "15",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": true,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "\\s+$",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "filterType": 7,
+      "value": "15",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Search": {
+      "search": "\\r",
+      "replace": "\\r\\n",
+      "ignoreCase": true,
+      "patternType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "InsertColumn": {
+      "filterType": 2,
+      "insertPos": 1,
+      "value": "post_date\taccount_no\tsource_code\tdeposit_amount\tsequence_no\taction_code\taccount_type\taccount_id\tuser_no\ttrans_description\ttrans_comment\ttrans_code\ttrans_from\ttrans_to\r\n"
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "\\\\fileserv\\it\\FI-Extracts\\Matadors\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

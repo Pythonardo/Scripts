@@ -1,0 +1,101 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "process_date   account_no   account_id   account_category     balance\r\n2020-09-01 12:29:00   32053698   DDA   101   500.00\r\n2020-09-01 08:33:00   73146768   DDA   103   600.00\r\n2020-08-31 15:23:00   73146849   DDA   103   2800.00\r\n2020-08-31 14:24:00   42010443   SAV   200   7379.97\r\n2020-08-31 12:03:00   9930000102   CD   413   200000.00\r\n2020-08-31 08:59:00   9930000100   CD   373   76783.66\r\n2020-08-28 16:18:00   04001092   DDA   103   280.00\r\n2020-08-28 11:01:00   32053685   DDA   103   174.52\r\n2020-08-28 09:32:00   92004519   DDA   151   300.00\r\n2020-08-28 09:30:00   73146836   DDA   101   3.25\r\n2020-08-27 10:13:00   32053588   DDA   101   0.00\r\n2020-08-27 09:08:00   32053575   DDA   103   10400.00\r\n2020-08-26 11:47:00   32053562   DDA   103   50.00\r\n2020-08-25 10:28:00   32053449   DDA   103   340.00\r\n2020-08-21 16:48:00   92004506   DDA   151   700.00\r\n2020-08-21 14:55:00   83013328   SAV   200   1000.00",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Columns": {
+      "filterType": 6,
+      "value": "1..2",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "2..5",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Search": {
+      "search": ",",
+      "replace": "",
+      "ignoreCase": true,
+      "patternType": 0,
+      "replaceType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Search": {
+      "search": "\\r",
+      "replace": "\\r\\n",
+      "ignoreCase": true,
+      "patternType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "InsertColumn": {
+      "filterType": 2,
+      "insertPos": 1,
+      "value": "process_date\taccount_no\taccount_id\taccount_category\tbalance\r\n"
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "\\\\fileserv\\it\\FI-Extracts\\Matadors\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

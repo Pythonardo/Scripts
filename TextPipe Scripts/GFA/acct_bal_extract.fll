@@ -1,0 +1,92 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "process_date,account_no,account_id,account_category,balance\r\n10\/28\/2020,1849970,SDMJ,11,4068984.38\r\n10\/28\/2020,1849970,SDCB,12,29954.58\r\n10\/28\/2020,1849970,SDMR,13,250000\r\n10\/28\/2020,1851303,SDMJ,11,15469.61\r\n10\/28\/2020,1851392,SDMJ,11,35.81\r\n10\/28\/2020,1849970,S,0,25\r\n10\/28\/2020,1851303,S,0,25\r\n10\/28\/2020,1851392,S,0,25\r\n",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Simple": {
+      "filterType": 10,
+      "enabled": false
+    },
+    "Columns": {
+      "filterType": 7,
+      "value": "6",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false
+    },
+    "Columns": {
+      "filterType": 6,
+      "value": "1",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Search": {
+      "search": "\"",
+      "replace": "",
+      "ignoreCase": true,
+      "patternType": 0,
+      "replaceType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Search": {
+      "search": ",",
+      "replace": "\\t",
+      "ignoreCase": true,
+      "patternType": 0,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "InsertColumn": {
+      "filterType": 2,
+      "insertPos": 1,
+      "value": "process_date\taccount_no\taccount_id\taccount_category\tbalance\r\n"
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "I:\\FI-Extracts\\GFA",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

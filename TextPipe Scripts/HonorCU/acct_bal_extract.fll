@@ -1,0 +1,90 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "process_date account_no account_id account_category balance\\n\r\n2020-10-20 101868-000 0 0 5.00\\n\r\n2020-10-20 101868-001 1 0 512704.06\\n\r\n2020-10-20 101868-002 2 0 145.93\\n\r\n2020-10-20 98359-000 0 0 14930.00\\n\r\n2020-10-20 98359-001 1 0 347956.93\\n\r\n2020-10-20 98359-002 2 0 38183.98\\n\r\n2020-10-20 98359-003 3 0 524585.03\\n\r\n2020-10-20 98359-004 4 0 74194.08\\n\r\n2020-10-20 98506-000 0 0 5.00\\n\r\n2020-10-20 98506-001 1 0 380067.09\\n\r\n2020-10-20 98506-002 2 0 53915.39\\n\r\n2020-10-21 101868-000 0 0 5.00\\n\r\n2020-10-21 101868-001 1 0 512056.80\\n\r\n2020-10-21 101868-002 2 0 145.93\\n\r\n",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log ",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Search": {
+      "search": "\\\\n",
+      "replace": "",
+      "ignoreCase": true,
+      "patternType": 0,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Number": {
+      "value": 1,
+      "filterType": 1
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "2",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": true,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": true,
+      "SubFilters": {
+        "Columns": {
+          "filterType": 17,
+          "value": "-3..+4",
+          "moveTo": 1,
+          "processIndividually": false,
+          "excludeDelimiter": false,
+          "excludeQuotes": false,
+          "delimiter": 0,
+          "customDelimiter": ",",
+          "customQualifier": "\"",
+          "hasHeader": false
+        },
+        "Search": {
+          "search": "accoun",
+          "replace": "account_no",
+          "ignoreCase": true,
+          "patternType": 0,
+          "firstOnly": true,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "I:\\FI-Extracts\\HonorCU\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

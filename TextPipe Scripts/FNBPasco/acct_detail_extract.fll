@@ -1,0 +1,62 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "account_no   account_name\r\n00200204   Cashier's Checks\r\n00200300   CD Interest Checks\r\n00200400   Expense Checks\r\n00200500   Loan Proceeds\r\n01000038   Fifty-Plus Checking\r\n01000096   Interest Checking\r\n01000119   Pillar Checking\r\n01000135   Advantage Gold\r\n01000274   Fifty-Plus Checking\r\n01000410   Interest Checking\r\n01000591   Interest Checking\r\n01000863   Pillar Checking\r\n01001121   Fifty-Plus Checking\r\n01001545   Fifty-Plus Checking\r\n01002670   Fifty-Plus Checking\r\n01003064   Fifty-Plus Checking\r\n01003349   Fifty-Plus Checking\r\n01004267   Pillar Checking\r\n01004607   Fifty-Plus Checking",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Comment": {
+      "value": "replace 3 spaces w\/ TAB..."
+    },
+    "Search": {
+      "search": "\"",
+      "replace": "\\t",
+      "ignoreCase": true,
+      "patternType": 0,
+      "replaceType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Search": {
+      "search": "   ",
+      "replace": "\\t",
+      "ignoreCase": true,
+      "patternType": 0,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "I:\\FI-Extracts\\FNBPasco\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}

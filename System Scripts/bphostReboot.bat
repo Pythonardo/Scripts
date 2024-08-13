@@ -1,0 +1,1 @@
+shutdown /r /m \\BPHOST /c "BPSQL unresponsive" /f /d P:4:1

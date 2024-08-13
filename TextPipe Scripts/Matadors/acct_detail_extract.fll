@@ -1,0 +1,121 @@
+﻿{
+  "formatName": "TextPipe_FLL",
+  "formatVersion": "1.0",
+  "trialInput": "account_no   account_name\r\n00200204   Cashier's Checks\r\n00200300   CD Interest Checks\r\n00200400   Expense Checks\r\n00200500   Loan Proceeds\r\n01000038   Fifty-Plus Checking\r\n01000096   Interest Checking\r\n01000119   Pillar Checking\r\n01000135   Advantage Gold\r\n01000274   Fifty-Plus Checking\r\n01000410   Interest Checking\r\n01000591   Interest Checking\r\n01000863   Pillar Checking\r\n01001121   Fifty-Plus Checking\r\n01001545   Fifty-Plus Checking\r\n01002670   Fifty-Plus Checking\r\n01003064   Fifty-Plus Checking\r\n01003349   Fifty-Plus Checking\r\n01004267   Pillar Checking\r\n01004607   Fifty-Plus Checking",
+  "Logging": {
+    "expanded": true,
+    "enabled": true,
+    "filename": "%USERPROFILE%\\textpipe.log",
+    "append": true,
+    "threshold": 500,
+    "commentFilters": false
+  },
+  "Files": [
+    {
+      "filename": "",
+      "subfolder": "None",
+      "action": "Include"
+    }
+  ],
+  "Filters": {
+    "Input": {
+      "binaryFiles": 1,
+      "inputFromFiles": 1,
+      "insideCompressed": false
+    },
+    "Columns": {
+      "filterType": 6,
+      "value": "1",
+      "moveTo": 1,
+      "processIndividually": false,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 0,
+      "customDelimiter": ",",
+      "customQualifier": "\"",
+      "hasHeader": false
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "1",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": " ",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 0,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "Columns": {
+      "expanded": true,
+      "filterType": 4,
+      "value": "2",
+      "moveTo": 1,
+      "processIndividually": true,
+      "excludeDelimiter": false,
+      "excludeQuotes": false,
+      "delimiter": 1,
+      "textQualifier": 2,
+      "customDelimiter": ",",
+      "hasHeader": false,
+      "SubFilters": {
+        "Search": {
+          "search": "\\s+$",
+          "replace": "\\t",
+          "ignoreCase": true,
+          "patternType": 1,
+          "replaceType": 1,
+          "greedy": false,
+          "dotMatchesNewLines": true,
+          "utf8support": true
+        }
+      }
+    },
+    "InsertColumn": {
+      "filterType": 0,
+      "insertPos": 0,
+      "value": "\\t\\t\\t"
+    },
+    "Search": {
+      "search": "\\r",
+      "replace": "\\r\\n",
+      "ignoreCase": true,
+      "patternType": 1,
+      "greedy": false,
+      "dotMatchesNewLines": true,
+      "utf8support": true
+    },
+    "InsertColumn": {
+      "filterType": 2,
+      "insertPos": 1,
+      "value": "account_no\tname\taccount_open_date\taccount_close_date\taccount_type\r\n"
+    },
+    "Output": {
+      "retainDateTime": false,
+      "outputToFile": 1,
+      "changeExtension": false,
+      "newExtension": ".txt",
+      "changeBaseDir": true,
+      "newBaseDir": "\\\\fileserv\\it\\FI-Extracts\\Matadors\\",
+      "maintainStructure": false,
+      "singleFilename": "%USERPROFILE%\\mergefilename.txt",
+      "append": false,
+      "ignoreStartFolder": false,
+      "isPrimary": true
+    }
+  }
+}
