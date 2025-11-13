@@ -1,1 +1,0 @@
- Get-LocalUser -Name "PCCU-Admin" | Enable-LocalUser
