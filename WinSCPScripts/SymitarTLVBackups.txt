@@ -1,6 +1,0 @@
-open sftp://root:Symit%40r92123@tlv/ -hostkey="ssh-ed25519 255 zuavODI8OMrmeLJFINyVY9yF2gvqTwN+rSpQcyuc7qQ="
-
-cd /Storage/0358/Current/
-get -resumesupport=on -resume -preservetime -delete *
-
-exit
