@@ -1,1 +1,0 @@
-﻿Get-ADUser -filter {Enabled -eq $True -and PasswordNeverExpires -eq $False} -Property "DisplayName", "msDS-UserPasswordExpiryTimeComputed" | Select-Object -Property "Displayname",@{Name="ExpiryDate";Expression={[datetime]::FromFileTime($_."msDS-UserPasswordExpiryTimeComputed")}} | export-csv "\\fs1\IT\Powershell Reports from SAW1\PasswordExp.csv"
